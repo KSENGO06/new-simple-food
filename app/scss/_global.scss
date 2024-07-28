@@ -1,0 +1,285 @@
+
+button {
+  background-color: transparent;
+  display: inline-block;
+  padding: 0;
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  @extend%rubik-400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: $default;
+  background-color: #f9faff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+}
+
+.btn {
+  line-height: 1.3;
+  color: $text;
+  letter-spacing: 0.03em;
+  background-color: $accent;
+}
+
+.link-active {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: $title;
+  &:focus{
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: rgba(255, 255, 255, 0.01);
+    border-radius:5px;
+  }
+  &:hover{
+    color:$accent;
+    text-decoration: none;
+    transition: all 0.4s;
+  }
+  &:active{
+    text-shadow: 2px 2px 5px  rgba(49, 53, 43, 0.5);
+    color: $default;
+  }
+
+}
+
+.title {
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 36px;
+  @extend%rubik-500;
+  line-height: 1.3;
+  color: $title;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+.icon{
+  display: block;
+  width: 35px;
+  height: 34px;
+}
+.logo{
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    background-color: rgba(255, 255, 255, 0.01);
+    border-radius:5px;
+  }
+  
+  &:hover {
+    opacity: 0.8;
+    transition: 0.4s;
+  }
+  
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.social__icon{
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  }
+  &:focus circle {
+    fill:rgba(255, 104, 56, 0.1); 
+    stroke: $accent;
+  }
+  &:focus path {
+    fill:$default;
+  }
+  &:hover circle {
+    fill:$accent; 
+  }
+  &:hover path {
+    fill:$text;
+  }
+  
+  &:active circle {
+    fill:rgba(255, 104, 56, 0.1); 
+  }
+  
+  &:active path {
+    fill:$accent; 
+  }
+}
+
+.active-elm{
+&:focus{
+  border-radius:5px;
+  box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  background-color: rgba(255, 104, 56, 0.1);
+  color:$accent;
+}
+&:hover{
+  border-radius:5px;
+  box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7), 0 5px 12px 0 rgba(255, 104, 56, 0.2);
+  color:$accent;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.4s;
+}
+&:active{
+  background-color: rgba(255, 104, 56, 0.1);
+  color:$accent;
+}
+}
+
+.user__nav-link{
+  &:hover{
+    background-color:$accent;
+    color: #fff;
+    box-shadow:none;
+  }
+
+  .user__nav-num{
+    &:hover{
+      background-color: $text;
+      color: $accent;
+    }
+  }
+}
+
+
+
+.popular-categories__nav-btn.mixitup-control-active{
+color: $text;
+background-color: #ff6838;
+  }
+
+  .popular-categories__nav-btn{
+    &:focus{
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      background: #fff;
+      color:$default;
+    }
+    &:hover{
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      background-color: rgba(255, 104, 56, 0.1);
+      color: $accent;
+      transition: all 0.4s;
+    }
+    &:active{
+      box-shadow: inset 0 -5px 12px 0 rgba(255, 104, 56, 0.2);
+      background-color: $text;
+      color: $default;
+    }
+}
+.categories-card{
+  &:hover{
+    box-shadow: 0 0 0 1px $accent;
+    transition: 0.4s;
+  }
+}
+.restaurants-card{
+  &:hover{
+    box-shadow: 0 3px 15px 0 rgba(255, 104, 56, 0.5);
+    transition: 0.4s;
+  }
+}
+.restaurants__btn{
+  &:focus{
+    border-radius: 20px;
+    color: $accent;
+  }
+  &:hover{
+    border-radius: 20px;
+    padding-left: 48px;
+    padding-right:7px ;
+    color: $accent;
+  }
+  &:active{
+    background-color: rgba(255, 104, 56, 0.1);
+  }
+}
+
+.restaurants__arow{
+  &:focus{
+    color: $accent;
+  }
+  &:hover{
+    color:$accent;
+  }
+
+  &:active{
+    color:$accent;
+  }
+}
+
+.form-sabscrite__input {
+  &:focus {
+    box-shadow: 0 0 0 2px $accent;
+    border: none;
+  }
+
+  &:hover{
+    border: 1px solid #c2c2c2;
+
+  }
+
+  &:hover::placeholder {
+    color: #363853;
+    border:none;
+  }
+&__icon{
+  &:focus {
+  fill: $accent;
+  }
+  &:hover{
+    fill: $accent;
+  }
+  &:hover::placeholder {
+    fill: $accent;
+  }
+}
+}
+.reviews-slider__icon{
+color: #c2c2c2;
+}
+.reviews-slider{
+  &__arrow-prev{
+    color: #c2c2c2;
+  }
+  
+}
+&__arrow-prev:hover{
+  color: $accent;
+}
+
+&__arrow-next{
+  color: #c2c2c2;
+  }
+

@@ -1,0 +1,29 @@
+$accent:#ff6838;
+$default: #31352b;
+$title: #363853;
+$text:#ffffff;
+$border:#c2c2c2;
+$shodow:#ececec;
+$background: #f9faff;
+
+
+%rubik-300{
+    font-family: 'Rubik',sans-serif;
+    font-weight: 300;
+}
+
+%rubik-400{
+    font-family: 'Rubik',sans-serif;
+    font-weight: 400;
+}
+
+%rubik-500{
+    font-family: 'Rubik',sans-serif;
+    font-weight: 500;
+}
+
+%rubik-it{
+    font-family: 'Rubik',sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}

@@ -1,0 +1,620 @@
+@import "reset";
+@import "fonts";
+@import "vars";
+@import "libs";
+@import "mixin";
+@import "global";
+
+.header {
+    &__logo{
+        margin-right: auto;
+    }
+    padding-top: 162px;
+    &__inner{
+        position: fixed;
+        width: 100%;
+        padding:60px 0;
+        top: 0;
+        z-index: 1000;
+        transition: all 0.4s;
+        &-fixed{
+            padding: 20px 0;
+            background-color:$shodow;
+            opacity: 0.8;
+            box-shadow: 0px 0px 29px -11px rgba(0, 0, 0, 6);
+        }
+    }
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+.menu__list{
+    margin-right: 52px;
+    display: flex;
+    gap: 40px;
+    &-link{
+        font-size: 18px;
+        line-height: 1.3;
+        letter-spacing: 0.01em;
+        color: $default;
+        text-decoration: none;
+    }
+    &-active{
+        color:$accent;
+    }
+}
+
+
+.user__nav{
+display: flex;
+gap: 10px;
+&-link{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+&-icon{
+    width: 21px;
+    height: 21px;
+}
+&-num{
+    position: absolute;
+    background-color: $accent;
+    border-radius: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: $text;
+    font-size: 10px;
+    top:7px;
+    left: 25px;
+}
+}
+
+
+.hero {
+
+&__content {
+    padding-top: 155px;
+    padding-bottom: 285px;
+    max-width: 476px;
+    width: 100%;
+}
+
+&__title {
+    font-size: 66px;
+    text-transform: uppercase;
+    color: $title;
+    line-height: 1.3;
+    @extend %rubik-500;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+&__subtitle {
+    color: $accent;
+}
+
+&__inner {
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+&__text {
+    margin-bottom: 30px;
+    max-width: 460px;
+}
+&__botton{
+    padding: 12px 32px;
+    border-radius: 6px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+}
+
+
+
+.popular-categories {
+text-align: center;
+&__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 45px;
+}
+&__icon{
+    width: 44px;
+    height: 44px;
+}
+
+&__nav-btn {
+    padding: 12px 32px;
+    box-shadow: 0 0 0 1px $shodow;
+    border-radius: 5px;
+    background-color: $text;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+&__text {
+    line-height: 1.3;
+    text-align: center;
+}
+&__inner {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+&__list{
+    max-width: 210px;
+    width: 100%;
+    height: 299px;
+}
+}
+
+.categories-card {
+    max-width: 210px;
+    width: 100%;
+    height: 299px;
+    border-radius: 5px;
+    padding: 20px 10px;
+    background-color: $text;
+    box-shadow: 0 0 0 1px $shodow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    &__img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    &__title {
+        font-size: 15px;
+        text-align: center;
+        line-height: 1.2;
+        color: $default;
+        margin-bottom: 10px;
+        @include line-clamp(3);
+        @extend%rubik-400;
+    
+    }
+    
+    &__price {
+        display: block;
+        font-size: 15px;
+        color: $title;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        margin-top: auto;
+        @extend%rubik-500;
+    }
+    
+    &__botton {
+        padding: 7px 12px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+    
+}
+
+.about{
+    &__inner{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        gap: 120px;
+    }
+
+    &__list{
+        display: flex;
+        align-items:center;
+        gap:30px;
+        &:not(last-child){
+            margin-bottom: 20px;
+        }
+    }
+
+    &__content{
+        max-width: 470px;
+        width: 100%;
+        padding-bottom: 10px;
+} 
+    &__title{
+        margin-bottom: 30px;
+        font-size: 36px;
+        line-height: 1.3;
+    }
+
+    &__text{
+        margin-bottom: 30px;
+    }
+    
+    &__items{
+    font-size: 24px;
+    margin-bottom: 40px;
+    }
+    
+    &__link{
+        border-radius: 6px;
+        padding: 14px 32px;
+        font-size: 18px;
+    }
+}
+
+.restaurants{
+    padding-bottom: 60px;
+    &__btn{
+        background-color:$accent;
+        padding-top: 5px;
+        padding-left: 28px;
+        padding-right: 28px;
+        border-radius:20px;
+    }
+
+    &__inner{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &-card{
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+        background-color:$text;
+    }
+    
+    &__title{
+        font-size: 24px;  
+        line-height: 1.3;
+        margin-bottom: 15px;
+        @extend%rubik-400;
+    }
+    
+    &__time{
+        @extend%rubik-300;
+        font-size: 18px;
+        line-height: 1.67;
+        display: flex;
+        justify-content: space-between;
+        align-items:center
+    }
+
+    &__time{
+        position: relative;
+        padding-left: 30px;
+        &:after{
+            position: absolute;
+            content: ""; 
+            left:0px; 
+            top: 20px; 
+            transform: translateY(-50%) scaleX(-1) ;
+            width: 22px;
+            height: 22px; 
+            background-image: url(../images/rest/icon/work_time.svg); 
+            background-size: contain; 
+            background-repeat: no-repeat;
+        }
+    }
+    &__arow{
+        height: 24px;
+        width: 24px;
+        color: $text;
+    }
+    
+    &__text{
+        padding-top: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 23px;
+    }
+    
+}
+
+.arrows-wrap {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:center; 
+    align-items:center;
+}
+
+.reviews{
+    padding-top: 60px;
+    &-slider {
+        position: relative; 
+        &__photo {
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position:center;
+            border-radius: 50%;
+        }
+        
+        &__icon {
+            width: 34px;
+            height: 34px;
+        }
+        &__arrow {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            &__prev{
+                position: relative; 
+                left: 50%; 
+                transform: translateX(50px); 
+            }
+            
+            &__next {
+                position: relative;
+                right: 50%; 
+                transform: translateX(-50px); 
+            }
+        }
+    }
+    
+    &-slider__item {
+        display: flex;
+        align-items: center; 
+    }
+        &__quote {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Вертикальне центрування */
+            gap: 40px; /* Відстань між зображенням і текстовим контентом */
+            &-content {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                position: relative;
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+            &-author{
+                    color: $accent;
+                    @extend%rubik-500;
+                    font-style: normal;
+                }
+                &-characteristics{
+                        font-size: 14px;
+                        line-height: 1.3;
+                        color: $default;
+                        display: block;
+                    }
+                    &-text{
+                            font-style: italic;
+                            line-height: 1.5;
+                            max-width: 570px;
+                            width: 100%;
+                            &::after {
+                                    content: ""; /* Необхідно для того, щоб псевдоелемент відображався */
+                                    position: absolute; /* Абсолютне позиціонування */
+                                    left: 0; /* Відступ від лівого краю контейнера тексту */
+                                    top: 0px; /* Центрування іконки по вертикалі */
+                                    transform: translateY(-50%); /* Центрування по вертикалі */
+                                    width: 24px; /* Ширина іконки */
+                                    height: 20px; /* Висота іконки */
+                                    background-image: url(../images/icons/slider_start.svg); /* URL до вашої іконки */
+                                    background-size: contain; /* Вміщення іконки в контейнер */
+                                    background-repeat: no-repeat;
+                                }
+                            
+                            &::before {
+                                    content: ""; /* Необхідно для того, щоб псевдоелемент відображався */
+                                    position: absolute; /* Абсолютне позиціонування */
+                                    right: 0; /* Відступ від лівого краю контейнера тексту */
+                                    bottom: 100px; /* Центрування іконки по вертикалі */
+                                    transform: translateY(50%) scaleX(-1) ; /* Центрування по вертикалі */
+                                    width: 24px; /* Ширина іконки */
+                                    height: 20px; /* Висота іконки */
+                                    background-image: url(../images/icons/slider_start.svg); /* URL до вашої іконки */
+                                    background-size: contain; /* Вміщення іконки в контейнер */
+                                    background-repeat: no-repeat;
+                                }
+                        }
+        }
+    }
+
+.slick{
+    &-btn{
+    bottom: 0;
+    width: 34px;
+    padding: 0 10px;
+    }
+    &-dots{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding-left: 40px;
+        padding-right: 40px;
+        position: relative; 
+        z-index: 1;
+        li{
+            button{
+                padding: 0;
+                font-size: 0;
+                background-color:$border;
+                width: 15px;
+                height: 15px;
+                border-radius:50%;
+            }
+            &.slick-active{
+                button{
+                    background-color:$accent;
+    
+            }
+        }
+    }
+    }
+}
+
+
+.application{
+padding-bottom: 60px;
+    &__content{
+        max-width: 470px;
+        width: 100%;
+    }
+
+    &__icons{
+        display: flex;
+        gap:30px;
+    }
+    
+    &__title{
+        @extend%rubik-500;
+        font-size: 36px;
+        line-height: 1.3;
+        color:$title;
+        margin-bottom: 45px;
+    }
+
+    &__text{
+        margin-bottom: 30px;
+    }
+    &__app{
+        max-width:570px ;
+    }
+    &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    }
+}
+
+.footer{
+    padding-top: 60px;
+    &__logo {
+        display: block;
+        margin-bottom: 28px;
+        }
+    &-bottom{
+        background-color: #363853;
+        padding:30px 10px;
+        &__copy{
+            font-size: 14px;
+            line-height: 1;
+            color: #fff;
+            text-align: center;
+        }
+    }
+    &-top{
+        padding-bottom: 60px;
+        display: flex;
+        &__action{
+            margin-right: 70px;
+        }
+        &__list{
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            column-gap: 90px;
+            margin-right: 140px;
+        }
+
+        &__item{
+            font-size: 18px;
+            line-height: 1.3;
+            color: $default;
+            letter-spacing: 0.01em;
+            text-decoration: none;
+            }
+    }
+}
+
+
+.form-sabscrite{
+    &__input {
+            padding: 13px 15px;
+            border: 1px solid $border;
+            border-radius: 5px;
+            background-color: $text;
+            width: 200px;
+            height: 44px;
+            margin-bottom: 13px;
+            &::placeholder {
+                line-height: 1.3;
+                color: $border;
+                opacity: 0.9;
+                font-size: 14px;
+            }
+    }
+    &__btn{
+            font-size: 14px;
+                @extend%rubik-500;
+                line-height: 1.3;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                width: 200px;
+                padding: 13px 37px;
+                border-radius: 5px;
+            
+    }
+    &__icon{
+        width: 15px;
+        height: 15px;
+    }
+
+}
+
+
+.address{
+
+    &-item{
+        font-size: 16px;
+        line-height: 2;
+        color: #31352b;
+        margin-bottom: 15px;
+        &__str::before {
+            background-image: url("../images/icons/location.svg"); /* Заміна на шлях до вашої іконки адреси */
+        }
+
+        &__tel::before {
+            background-image: url("../images/icons/calling.svg"); /* Заміна на шлях до вашої іконки телефону */
+        }
+        
+        &__email::before {
+            background-image: url("../images/icons/message.svg");
+        }
+    }
+    
+    &-link{
+        position: relative;
+        padding-left: 35px;
+        &:before {
+            content: "";
+            position: absolute;
+            left:3px;
+            top: 10px;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-position:center left ;
+        }
+    }
+}
+
+.social-list{
+    display: flex;
+    gap: 13px;
+    color:$border;
+}
+
+
+
+
