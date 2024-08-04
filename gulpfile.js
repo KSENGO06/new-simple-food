@@ -11,6 +11,8 @@ const browserSync = require("browser-sync").create();
 const svgSprite = require('gulp-svg-sprite');
 const cheerio = require('gulp-cheerio');
 const replace = require('gulp-replace');
+const rename = require('gulp-rename');
+
 
 function browsersync() {
   browserSync.init({
@@ -20,6 +22,12 @@ function browsersync() {
     notify: false,
   });
 }
+gulp.task('copy-swiped-events', function() {
+  return gulp.src('node_modules/swiped-events/dist/swiped-events.min.js')
+      .pipe(rename('swiped-events.min.js'))
+      .pipe(gulp.dest('app/js/vendor'));
+});
+
 
 function svgSprites() {
   return src('app/images/icons/*.svg') 
@@ -120,7 +128,9 @@ function images() {
 }
 
 function build() {
-  return src(["app/**/*.html", "app/css/style.min.css", "app/js/main.min.js"], {
+  return src(["app/**/*.html", "app/css/style.min.css", "app/js/main.min.js"], 
+    gulp.task('build', gulp.series('copy-swiped-events', 'styles', 'scripts', 'html')),
+    {
     base: "app",
   }).pipe(dest("dist"));
 }
@@ -141,6 +151,7 @@ function scripts() {
     "node_modules/jquery/dist/jquery.js",
     "node_modules/slick-carousel/slick/slick.js",
     "node_modules/mixitup/dist/mixitup.js",
+    "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
     "app/js/main.js",
   ])
     .pipe(concat("main.min.js"))
