@@ -13,7 +13,6 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-
 <body>
     <div class="wrapper">
         <header class="header">
@@ -37,7 +36,7 @@
                         <div class="user-nav">
                             <a class="user-nav__link active-elm" href="#">
                                 <svg class="user-nav__icon">
-                                    <use xlink:href="images/sprite.svg#search-btn"></use>
+                                    <use xlink:href="images/sprite.svg#serch"></use>
                                 </svg>
                             </a>
                             <a class="user-nav__link active-elm" href="#">
@@ -59,7 +58,7 @@
             <h1 class="sr-only"> simple food швидка доставка  їжі </h1>
             <section class="hero">
                 <div class="container">
-                    <div class="hero__inner" style="background-image: url(images/scooter_guy.svg);" >
+                    <div class="hero__inner">
                         <div class="hero__content">
                             <h2 class="hero__title">
                                 Доставка
@@ -72,6 +71,7 @@
                             <a class="hero__botton btn active-elm" href="#">Замовити</a>
                             <a class="hero__link link-active " href="#">Детальніше</a>
                         </div>
+                        <div class="hero__picture" style="background-image: url(images/icons/scooter_guy.png);"></div>
                     </div>
                 </div>
             </section>
@@ -320,20 +320,20 @@
                             </p>
                             <ul class="about__items">
                                 <li class="about__list">
-                                    <svg class=" about__list-icon">
+                                    <svg class=" about__list-icon--time">
                                         <use xlink:href="images/sprite.svg#timer_icon"></use>
                                     </svg>
                                     <span class="about__items-text">
                                         Швидка доставка за 15 хвилин</span>
                                 </li>
                                 <li class="about__list">
-                                    <svg class=" about__list-icon">
+                                    <svg class=" about__list-icon--delivery">
                                         <use xlink:href="images/sprite.svg#delivery_icon"></use>
                                     </svg>
                                     <span class="about__items-text"> Чемні кур’єри</span>
                                 </li>
                                 <li class="about__list">
-                                    <svg class=" about__list-icon">
+                                    <svg class=" about__list-icon--resturent">
                                         <use xlink:href="images/sprite.svg#resturent_icon"></use>
                                     </svg>
                                     <span class="about__items-text">Більше 500 закладів</span>
@@ -708,6 +708,6 @@
         </div>
     </div>
     <div class="overlay"></div>
-    <script src="js/main.min.js"></script>
+    <script type="module" src="js/main.min.js"></script>
 </body>
 </html>
