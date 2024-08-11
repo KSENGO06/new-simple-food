@@ -16,11 +16,12 @@ const rename = require('gulp-rename');
 
 function browsersync() {
   browserSync.init({
-      server: {
-          baseDir: 'app/'
-      },
+    server: {
+      baseDir: 'app/'
+    },
   });
 }
+
 
 function copySwipedEvents() {
   return src('node_modules/swiped-events/dist/swiped-events.min.js')
@@ -90,7 +91,7 @@ function images() {
 
 
 function copyStyles() {
-  return src('nodemodules/nouislider/dist/nouislider.css')
+  return src('node_modules/nouislider/dist/nouislider.css')
     .pipe(dest('app/css/vendor'));
 }
 

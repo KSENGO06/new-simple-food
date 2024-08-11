@@ -30,18 +30,18 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^5.0.0",
-    "jquery": "^3.7.1",
-    "sass": "^1.77.8",
-    "slick-carousel": "^1.8.1"
-  },
-  "dependencies": {
-    "D": "^1.0.0",
     "ion-rangeslider": "^2.3.1",
+    "jquery": "^3.7.1",
     "jquery-bar-rating": "^1.2.2",
     "jquery-form-styler": "^2.0.2",
     "jquery-ui": "^1.14.0",
     "mixitup": "^3.3.1",
     "nouislider": "^15.8.1",
+    "sass": "^1.77.8",
+    "slick-carousel": "^1.8.1",
     "swiped-events": "^1.2.0"
+  },
+  "dependencies": {
+    "D": "^1.0.0"
   }
 }

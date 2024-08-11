@@ -327,62 +327,61 @@ body.lock {
             gap: 10px;
             padding: 1px 0;
         }
-
-        &-btn {
-            padding: 14px 32px;
-            scroll-snap-align: start;
-            box-shadow: 0 0 0 1px $shodow;
-            border-radius: 5px;
-            background-color: $text;
-            display: flex;
-            align-items: center;
-            transition: background-color box-shadow 0.4s;
-
-            @include mq("phone") {
-                font-size: 14px;
-                padding: 10px 14px;
-            }
-
-            &:focus {
-                box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-                background: #fff;
-
-                .popular-categories__icon {
-                    fill: $default;
-                }
-            }
-
-            &:hover {
-                box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-                background-color: rgba(255, 104, 56, 0.1);
-                color: $accent;
-
-                .popular-categories__icon {
-                    fill: $accent;
-                }
-            }
-
-            &:active {
-                box-shadow: inset 0 -5px 12px 0 rgba(255, 104, 56, 0.2);
-                background-color: $text;
-                color: $default;
-
-                .popular-categories__icon {
-                    fill: $default;
-                }
-            }
-
-            &.mixitup-control-active {
-                .popular-categories__icon {
-                    fill: $text;
-                }
-
-                background-color: #ff6838;
-                color: $text;
+    }
+    &__nav-btn {
+        padding: 14px 32px;
+        scroll-snap-align: start;
+        box-shadow: 0 0 0 1px $shodow;
+        border-radius: 5px;
+        background-color: $text;
+        display: flex;
+        align-items: center;
+        transition: background-color box-shadow 0.4s;
+    
+        @include mq("phone") {
+            font-size: 14px;
+            padding: 10px 14px;
+        }
+    
+        &:focus {
+            box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+            background: #fff;
+    
+            .popular-categories__icon {
+                fill: $default;
             }
         }
+    
+        &:hover {
+            box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+            background-color: rgba(255, 104, 56, 0.1);
+            color: $accent;
+    
+            .popular-categories__icon {
+                fill: $accent;
+            }
+        }
+    
+        &:active {
+            box-shadow: inset 0 -5px 12px 0 rgba(255, 104, 56, 0.2);
+            background-color: $text;
+            color: $default;
+    
+            .popular-categories__icon {
+                fill: $default;
+            }
+        }
+    
+        &.mixitup-control-active {
+            .popular-categories__icon {
+                fill: $text;
+            }
+    
+            background-color: #ff6838;
+            color: $text;
+        }
     }
-
+    
     &__elm {
         flex: 0 0 auto;
     }
@@ -529,35 +528,35 @@ body.lock {
             position: relative;
             z-index: 3;
         }
+    }
 
-        &-picture {
-            width: 440px;
-            height: 584px;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            z-index: 1;
+    &__inner-picture {
+        width: 440px;
+        height: 584px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        z-index: 1;
 
-            @include mq("desktop") {
-                background-size: 90%;
-            }
+        @include mq("desktop") {
+            background-size: 90%;
+        }
 
-            @include mq("tablet") {
-                background-size: 80%;
+        @include mq("tablet") {
+            background-size: 80%;
+            position: absolute;
+            opacity: 1;
+
+            &::before {
+                content: "";
                 position: absolute;
-                opacity: 1;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 60px;
-                    height: auto;
-                    left: 0px;
-                    width: 100%;
-                    height: 80%;
-                    background-color: rgba(249, 250, 255, 0.85);
-                    z-index: 2;
-                }
+                top: 60px;
+                height: auto;
+                left: 0px;
+                width: 100%;
+                height: 80%;
+                background-color: rgba(249, 250, 255, 0.85);
+                z-index: 2;
             }
         }
     }
@@ -579,25 +578,24 @@ body.lock {
                 margin-bottom: 15px;
             }
         }
+    }
+    &__list-icon {
+        &--time {
+            width: 34px;
+            height: 33px;
+            fill: #ff6838;
+        }
 
-        &-icon {
-            &--time {
-                width: 34px;
-                height: 33px;
-                fill: #ff6838;
-            }
+        &--delivery {
+            width: 34px;
+            height: 33px;
+            fill: #00AAFF;
+        }
 
-            &--delivery {
-                width: 34px;
-                height: 33px;
-                fill: #00AAFF;
-            }
-
-            &--resturent {
-                width: 34px;
-                height: 33px;
-                fill: #FF2222;
-            }
+        &--resturent {
+            width: 34px;
+            height: 33px;
+            fill: #FF2222;
         }
     }
 
@@ -683,6 +681,64 @@ body.lock {
 
         @include mq("tablet") {
             grid-template-columns: 1fr;
+        }
+    }
+    .slick-disabled {
+        border-color: $accent;
+    
+        .reviews__slider-icon {
+            fill: $accent;
+        }
+    }
+    
+    .slick-btn {
+        bottom: 0;
+        width: 34px;
+        padding: 0 10px;
+    }
+    
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        position: relative;
+        z-index: 1;
+        margin-top: 18px;
+    
+        @include mq("phone") {
+            margin-top: -15px;
+        }
+    
+        li {
+            &.slick-active {
+                button {
+                    background-color: $accent;
+                }
+            }
+    
+            button {
+                padding: 0;
+                font-size: 0;
+                background-color: $border;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+    
+                &:focus {
+                    box-shadow: 0 0 0 2px $accent;
+                }
+    
+                &:hover {
+                    background-color: #fff2ed;
+                    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.5);
+                }
+    
+                &:active {
+                    border: none;
+                    box-shadow: none;
+                    background-color: rgba(255, 104, 56, 0.5);
+                }
+            }
         }
     }
 }
@@ -812,20 +868,20 @@ body.lock {
 
     &__slider {
         position: relative;
-
-        &-item {
+    }
+        &__slider-item {
             display: flex;
             align-items: center;
         }
 
-        &-icon {
+        &__slider-icon {
             width: 11px;
             height: 19px;
             stroke: none;
             fill: $border;
         }
 
-        &-photo {
+        &__slider-photo {
             max-width: 300px;
             width: 100%;
             height: 300px;
@@ -846,7 +902,7 @@ body.lock {
             }
         }
 
-        &-arrow {
+        &__slider-arrow {
             width: 40px;
             height: 40px;
             display: flex;
@@ -921,7 +977,7 @@ body.lock {
                 }
             }
         }
-    }
+    
 
     &__quote {
         display: flex;
@@ -933,8 +989,8 @@ body.lock {
             flex-direction: column;
             gap: 30px;
         }
-
-        &-content {
+    }
+        &__quote-content{
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -947,7 +1003,7 @@ body.lock {
             }
         }
 
-        &-author {
+        &__quote-author {
             padding-top: 10px;
             color: $accent;
             @extend%rubik-500;
@@ -958,7 +1014,7 @@ body.lock {
             }
         }
 
-        &-characteristics {
+        &__quote-characteristics {
             font-size: 14px;
             line-height: 1.3;
             color: $default;
@@ -970,7 +1026,7 @@ body.lock {
             }
         }
 
-        &-text {
+        &__quote-text {
             font-style: italic;
             line-height: 1.5;
             max-width: 570px;
@@ -1023,68 +1079,69 @@ body.lock {
                     right: 7px;
                 }
             }
+        
+    }
+
+    .slick-disabled {
+        border-color: $accent;
+    
+        .reviews__slider-icon {
+            fill: $accent;
         }
     }
-}
-
-.slick-disabled {
-    border-color: $accent;
-
-    .reviews__slider-icon {
-        fill: $accent;
+    
+    .slick-btn {
+        bottom: 0;
+        width: 34px;
+        padding: 0 10px;
     }
-}
-
-.slick-btn {
-    bottom: 0;
-    width: 34px;
-    padding: 0 10px;
-}
-
-.slick-dots {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    position: relative;
-    z-index: 1;
-    margin-top: 18px;
-
-    @include mq("phone") {
-        margin-top: -15px;
-    }
-
-    li {
-        &.slick-active {
+    
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        position: relative;
+        z-index: 1;
+        margin-top: 18px;
+    
+        @include mq("phone") {
+            margin-top: -15px;
+        }
+    
+        li {
+            &.slick-active {
+                button {
+                    background-color: $accent;
+                }
+            }
+    
             button {
-                background-color: $accent;
-            }
-        }
-
-        button {
-            padding: 0;
-            font-size: 0;
-            background-color: $border;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-
-            &:focus {
-                box-shadow: 0 0 0 2px $accent;
-            }
-
-            &:hover {
-                background-color: #fff2ed;
-                box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.5);
-            }
-
-            &:active {
-                border: none;
-                box-shadow: none;
-                background-color: rgba(255, 104, 56, 0.5);
+                padding: 0;
+                font-size: 0;
+                background-color: $border;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+    
+                &:focus {
+                    box-shadow: 0 0 0 2px $accent;
+                }
+    
+                &:hover {
+                    background-color: #fff2ed;
+                    box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.5);
+                }
+    
+                &:active {
+                    border: none;
+                    box-shadow: none;
+                    background-color: rgba(255, 104, 56, 0.5);
+                }
             }
         }
     }
 }
+
 
 .application {
     padding-bottom: 60px;
@@ -1692,6 +1749,7 @@ body.lock {
 }
 
 .catalog {
+    padding: 60px 0;
     &__inner {
         display: flex;
         position: relative;
@@ -1704,25 +1762,29 @@ body.lock {
     &__title {
         font-size: 36px;
         line-height: 1.3;
+        margin-bottom: 60px;
         color: #363853;
-        padding: 62px 0;
         @extend%rubik-500;
 
         @include mq("tablet-2") {
             font-size: 30px;
-            padding-top: 40px;
-            padding-bottom: 30px;
+
+            margin-bottom: 30px;
         }
 
         @include mq("tablet") {
             font-size: 24px;
-            padding-top: 45px;
-            padding-bottom: 17px;
+
+            margin-bottom: 17px;
         }
     }
 
     &__filters {
         margin-right: 29px;
+        &--active {
+            transform: translateX(0);
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+        }
 
         @include mq("tablet") {
             position: fixed;
@@ -1761,10 +1823,7 @@ body.lock {
     }
 }
 
-.catalog__filters.catalog__filters--active {
-    transform: translateX(0);
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-}
+
 
 .filter__close {
     position: absolute;
@@ -1776,6 +1835,10 @@ body.lock {
     cursor: pointer;
     z-index: 1000;
     display: none;
+    width: 40px;
+    height: 40px;
+    background-color: #faeded;
+    border-radius: 3px;
 
     @include mq("tablet") {
         display: block;
@@ -1793,19 +1856,13 @@ body.lock {
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 998;
+    &--active {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
-.overlay.overlay--active {
-    opacity: 1;
-    visibility: visible;
-}
 
-.filter__close {
-    width: 40px;
-    height: 40px;
-    background-color: #faeded;
-    border-radius: 3px;
-}
 
 .filter {
     &__item {
@@ -1835,15 +1892,15 @@ body.lock {
 
     &__list {
         padding: 20px 15px;
-
         &-item {
 
             &:not(:last-child) {
                 margin-bottom: 5px;
             }
         }
+    }
 
-        &-link {
+        &__list-link {
             font-size: 18px;
             line-height: 1.3;
             letter-spacing: 0.03em;
@@ -1854,7 +1911,17 @@ body.lock {
             &--active {
                 color: $accent;
             }
-        }
+        
+    }
+}
+.filter-menu{
+    width: 47px;
+    height: 47px;
+    &__icon{
+    fill:$accent;
+    width: 31px;
+    height: 36px;
+    background-color: #FAEDED;
     }
 }
 
@@ -1963,8 +2030,8 @@ body.lock {
         }
     }
 
-    &__item,
-    &__next {
+    &__item{
+        &--active{
         &:focus {
             border: 1px solid $accent;
             border-radius: 3px;
@@ -1981,9 +2048,10 @@ body.lock {
         &:active {
             box-shadow: inset 0 -1px 4px 2px rgba(0, 0, 0, 0.15);
             border: none;
+            background-color:none;
         }
     }
-
+    }
     &__link,
     &__span {
         display: block;
@@ -1997,12 +2065,13 @@ body.lock {
         height: 18px;
         fill: black;
         stroke: none;
-
-        &-prev {
+    }
+        &__icon-prev {
             transform: scale(-1);
             fill: $border;
         }
-    }
+    
+    
 }
 
 
@@ -2091,7 +2160,7 @@ body.lock {
     color: #31352b;
     text-shadow: none;
     height: 47px;
-    margin-left: 20px;
+    margin-left: 0;
 
     &:focus {
         background-color: $text;
@@ -2099,7 +2168,6 @@ body.lock {
         border-radius: 3px;
         color: #31352b;
         border-color: $accent;
-
     }
 
     &:hover {
@@ -2116,6 +2184,12 @@ body.lock {
     }
 }
 
+.catalog-wrapper__selects-name.select-style{
+    width: 130px;
+}
+.catalog-wrapper__selects-num.select-style{
+    width: 92px;
+}
 .jq-selectbox li.selected {
     background-color: $accent;
     color: #FFF;

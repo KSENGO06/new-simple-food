@@ -44,7 +44,7 @@ body {
   color: $title;
 
   &:focus {
-    box-shadow: 0 0 0 2px $accent 0.7;
+    box-shadow: 0 0 0 2px rgb($accent, 0.7) ;
     background-color: $text 0.01;
     border-radius: 5px;
   }
@@ -93,7 +93,7 @@ body {
 
 .active-elm {
   border-radius: 5px;
-  transition: background-color, color 0.4s;
+  transition: background-color 0.4s, color 0.4s fill 0.4s;
 
   &:focus {
     box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);

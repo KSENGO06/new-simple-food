@@ -89,7 +89,6 @@
                             <option value="">4</option>
                         </select>
                         <select class="catalog-wrapper__selects-num select-style">
-
                             <option value="">по 12 </option>
                             <option value="">1</option>
                             <option value="">2</option>
@@ -101,7 +100,9 @@
                     
                 </div>
                 <button class="filter-menu" type="button" id="filterToggle">
-                    <img src="images/icons/filter-menu.svg" alt="меню фільтрів">
+                    <svg class="filter-menu__icon">
+                        <use xlink:href="images/sprite.svg#ic-filter_1"></use>
+                    </svg>
                 </button> 
                 <div class="overlay" id="overlay"></div>
                 <div class="catalog__inner">
@@ -414,21 +415,21 @@
                             <li class="pagination__item">
                         <span class=" pagination__span"> 1</span>
                     </li>
-                    <li class="pagination__item  pagination__item--num">
+                    <li class="pagination__item  pagination__item--num pagination__item--active ">
                         <a class="pagination__link" href="#">2</a>
                     </li>
                     <li class="pagination__item">
                         <span class=" pagination__span">...</span>
                     </li>
 
-                    <li class="pagination__item pagination__item--num">
+                    <li class="pagination__item pagination__item--num pagination__item--active">
                         <a class="pagination__link" href="#">9</a>
                     </li>
-                    <li class="pagination__item">
+                    <li class="pagination__item pagination__item--active" >
                         <a class="pagination__link" href="#">10</a>
                     </li>
                     </ul>
-                        <a class="pagination__next" href="#">
+                        <a class="pagination__next pagination__item--active" href="#">
                             <svg class="pagination__icon ">
                                 <use  xlink:href="images/sprite.svg#breadcrambs"></use>
                             </svg>

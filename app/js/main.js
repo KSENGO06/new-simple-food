@@ -187,14 +187,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var filterClose = document.getElementById('filterClose');
     var overlay = document.getElementById('overlay');
 
-    function toggleFilters() {
-        filterContent.classList.toggle('catalog__filters--active');
-        overlay.classList.toggle('overlay--active');
-    }
+    if (filterToggle && filterContent && filterClose && overlay) {
+        function toggleFilters() {
+            filterContent.classList.toggle('catalog__filters--active');
+            overlay.classList.toggle('overlay--active');
+        }
 
-    filterToggle.addEventListener('click', toggleFilters);
-    filterClose.addEventListener('click', toggleFilters);
-    overlay.addEventListener('click', toggleFilters);
+        filterToggle.addEventListener('click', toggleFilters);
+        filterClose.addEventListener('click', toggleFilters);
+        overlay.addEventListener('click', toggleFilters);
+    } else {
+        console.error('Не вдалося знайти один або більше елементів');
+    }
 });
 
 
