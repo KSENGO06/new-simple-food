@@ -57,19 +57,19 @@
         </header>
         <div class="breadcrumbs">
             <div class="container">
-            <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="#">
-                        Головна
-                    </a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <span class="breadcrumbs__link">
-                        Каталог продуктів
-                    </span>
-                </li>
-            </ul>
-        </div>
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="#">
+                            Головна
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span class="breadcrumbs__link">
+                            Каталог продуктів
+                        </span>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="catalog">
             <div class="container">
@@ -77,110 +77,113 @@
                     <h1 class="catalog__title">
                         Каталог продуктів
                     </h1>
-                
+
                     <div class="catalog-wrapper__selects">
                         <form class="catalog-wrapper__form">
-                        <select class="catalog-wrapper__selects-name select-style" >
-                            
-                            <option value="">За назвою</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                        </select>
-                        <select class="catalog-wrapper__selects-num select-style">
-                            <option value="">по 12 </option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                        </select>
-                    </form>
+                            <select class="catalog-wrapper__selects-name select-style">
+
+                                <option value="">За назвою</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                            </select>
+                            <select class="catalog-wrapper__selects-num select-style">
+                                <option value="">по 12 </option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </form>
                     </div>
-                    
+
                 </div>
                 <button class="filter-menu" type="button" id="filterToggle">
                     <svg class="filter-menu__icon">
                         <use xlink:href="images/sprite.svg#ic-filter_1"></use>
                     </svg>
-                </button> 
-                <div class="overlay" id="overlay"></div>
+                </button>
+                <div class="overlay overlay--filter"></div>
                 <div class="catalog__inner">
-                    <div class="catalog__filters filter"  id="filterContent">
-                        <button class="filter__close" id="filterClose">✕</button>
-                        <div class="filter__item">
-                            <h2 class="filter__title">
-                                Категорії
-                            </h2>
-                            <ul class="filter__list">
-                                <li class="filter__list-item">
-                                    <a class="filter__list-link  filter__list-link--active link-active " href="#">Бургери</a>
-                                </li>
-                                <li class="filter__list-item">
-                                    <a class="filter__list-link link-active" href="#">Піца</a>
-                                </li>
-                                <li class="filter__list-item">
-                                    <a class="filter__list-link link-active" href="#">Сендвічі</a>
-                                </li>
-                                <li class="filter__list-item">
-                                    <a class="filter__list-link link-active" href="#">Азійська кухня</a>
-                                </li>
-                                <li class="filter__list-item">
-                                    <a class="filter__list-link link-active" href="#">Сети</a>
-                                </li>
-                                <li class="filter__list-item">
-                                    <a class="filter__list-link link-active" href="#">Європейська кухня</a>
-                                </li>
-                                <li class="filter__list-item">
-                                    <a class="filter__list-link link-active" href="#">Напої</a>
-                                </li>
-                                <li class="filter__list-item">
-                                    <a class="filter__list-link link-active" href="#">Алкоголь</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="filter__item  filter-proposition">
-                            <h2 class="filter__title">
-                                Пропозиції
-                            </h2>
-                            <form class="filter-proposition__form" action="#">
-                                <label class="filter-proposition__lable">
-                                    <input class="filter-proposition__input" type="checkbox">
-                                    <span class="filter-proposition__checkbox"></span>
-                                    Зі знижкою
-                                </label>
-                                <label class="filter-proposition__lable">
-                                    <input class="filter-proposition__input" type="checkbox" checked>
-                                    <span class="filter-proposition__checkbox"></span>
-                                    Новинка
-                                </label>
-                                <label class="filter-proposition__lable">
-                                    <input class="filter-proposition__input" type="checkbox">
-                                    <span class="filter-proposition__checkbox"></span>
-                                    Хіт сезону
-                                </label>
-                            </form>
-                            
-                        </div>
-                        <div class="filter__item filter-price">
-                            <h2 class="filter__title">
-                                Ціна
-                            </h2>
-                            <div class="range-slider-container">
-                                <div class="extra-controls">
-                                    <span class="extra-controls-span" >від
-                                    <input type="text" class="js-input-from" value="0">
-                                    ₴
-                                </span>
+                    <div class="catalog__filters filter" id="filterContent">
+                        <div class="catalog__filters-wrapper">
+                            <button class="filter__close close-btn" id="filterClose"></button>
+                            <div class="filter__item">
+                                <h2 class="filter__title">
+                                    Категорії
+                                </h2>
+                                <ul class="filter__list">
+                                    <li class="filter__list-item">
+                                        <a class="filter__list-link  filter__list-link--active link-active "
+                                            href="#">Бургери</a>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <a class="filter__list-link link-active" href="#">Піца</a>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <a class="filter__list-link link-active" href="#">Сендвічі</a>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <a class="filter__list-link link-active" href="#">Азійська кухня</a>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <a class="filter__list-link link-active" href="#">Сети</a>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <a class="filter__list-link link-active" href="#">Європейська кухня</a>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <a class="filter__list-link link-active" href="#">Напої</a>
+                                    </li>
+                                    <li class="filter__list-item">
+                                        <a class="filter__list-link link-active" href="#">Алкоголь</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="filter__item  filter-proposition">
+                                <h2 class="filter__title">
+                                    Пропозиції
+                                </h2>
+                                <form class="filter-proposition__form" action="#">
+                                    <label class="filter-proposition__lable">
+                                        <input class="filter-proposition__input" type="checkbox">
+                                        <span class="filter-proposition__checkbox"></span>
+                                        Зі знижкою
+                                    </label>
+                                    <label class="filter-proposition__lable">
+                                        <input class="filter-proposition__input" type="checkbox" checked>
+                                        <span class="filter-proposition__checkbox"></span>
+                                        Новинка
+                                    </label>
+                                    <label class="filter-proposition__lable">
+                                        <input class="filter-proposition__input" type="checkbox">
+                                        <span class="filter-proposition__checkbox"></span>
+                                        Хіт сезону
+                                    </label>
+                                </form>
+
+                            </div>
+                            <div class="filter__item filter-price">
+                                <h2 class="filter__title">
+                                    Ціна
+                                </h2>
+                                <div class="range-slider-container">
                                     <div class="extra-controls">
-                                        <span class="extra-controls-span" >до
-                                    <input type="text" class="js-input-to" value="1000">
-                                    ₴
-                                </span>
-                                </div>
-                                </div>
-                                <div class="range-slider">
-                                    <input type="text" class="js-range-slider" value="">
+                                        <span class="extra-controls-span">від
+                                            <input type="text" class="js-input-from" value="0">
+                                            ₴
+                                        </span>
+                                        <div class="extra-controls">
+                                            <span class="extra-controls-span">до
+                                                <input type="text" class="js-input-to" value="1000">
+                                                ₴
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="range-slider">
+                                        <input type="text" class="js-range-slider" value="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -404,216 +407,222 @@
                             </article>
                         </li>
                     </ul>
-                    </div>
-                    <div class="pagination">
-                        <span class="pagination__prev">
-                            <svg class="pagination__icon  pagination__icon-prev">
-                                <use xlink:href="images/sprite.svg#breadcrambs"></use>
-                            </svg>
-                        </span>
-                        <ul class="pagination__list ">
-                            <li class="pagination__item">
-                        <span class=" pagination__span"> 1</span>
-                    </li>
-                    <li class="pagination__item  pagination__item--num pagination__item--active ">
-                        <a class="pagination__link" href="#">2</a>
-                    </li>
-                    <li class="pagination__item">
-                        <span class=" pagination__span">...</span>
-                    </li>
+                </div>
+                <div class="pagination">
+                    <span class="pagination__prev">
+                        <svg class="pagination__icon  pagination__icon-prev">
+                            <use xlink:href="images/sprite.svg#breadcrambs"></use>
+                        </svg>
+                    </span>
+                    <ul class="pagination__list ">
+                        <li class="pagination__item">
+                            <span class=" pagination__span"> 1</span>
+                        </li>
+                        <li class="pagination__item  pagination__item--num pagination__item--active ">
+                            <a class="pagination__link" href="#">2</a>
+                        </li>
+                        <li class="pagination__item">
+                            <span class=" pagination__span">...</span>
+                        </li>
 
-                    <li class="pagination__item pagination__item--num pagination__item--active">
-                        <a class="pagination__link" href="#">9</a>
-                    </li>
-                    <li class="pagination__item pagination__item--active" >
-                        <a class="pagination__link" href="#">10</a>
-                    </li>
+                        <li class="pagination__item pagination__item--num pagination__item--active">
+                            <a class="pagination__link" href="#">9</a>
+                        </li>
+                        <li class="pagination__item pagination__item--active">
+                            <a class="pagination__link" href="#">10</a>
+                        </li>
                     </ul>
-                        <a class="pagination__next pagination__item--active" href="#">
-                            <svg class="pagination__icon ">
-                                <use  xlink:href="images/sprite.svg#breadcrambs"></use>
-                            </svg>
-                        </a>
+                    <a class="pagination__next pagination__item--active" href="#">
+                        <svg class="pagination__icon ">
+                            <use xlink:href="images/sprite.svg#breadcrambs"></use>
+                        </svg>
+                    </a>
+                </div>
+                <section class="application">
+                    <div class="application__inner">
+                        <div class="application__content">
+                            <h2 class="application__title">
+                                Завантажте мобільний застосунок
+                            </h2>
+                            <p class="application__text">
+                                Ресторани, які ви любите - у ваших руках. Встановлюйте
+                                застосунок та замовляйте їжу в зручному місці в зручний час
+                            </p>
+                            <ul class="application__icons">
+                                <li class="application__icon">
+                                    <a class="application__icon-link" target="_blank" rel="noopener noreferrer"
+                                        href="#">
+                                        <img src="images/icons/app_store.png" alt="іконка додатку apple" width="120"
+                                            height="40">
+                                    </a>
+                                </li>
+                                <li class="application__icon">
+                                    <a class="application__icon-link" target="_blank" rel="noopener noreferrer"
+                                        href="#">
+                                        <img src="images/icons/play_store.png" alt="іконка додатку android" width="135"
+                                            height="40">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="application__image" style="background-image: url(images/icons/get_app.png);">
+                        </div>
                     </div>
-                    <section class="application">
-                            <div class="application__inner">
-                                <div class="application__content">
-                                    <h2 class="application__title">
-                                        Завантажте мобільний застосунок
-                                    </h2>
-                                    <p class="application__text">
-                                        Ресторани, які ви любите - у ваших руках. Встановлюйте
-                                        застосунок та замовляйте їжу в зручному місці в зручний час
-                                    </p>
-                                    <ul class="application__icons">
-                                        <li class="application__icon">
-                                            <a class="application__icon-link" target="_blank" rel="noopener noreferrer" href="#">
-                                                <img src="images/icons/app_store.png" 
-                                                    alt="іконка додатку apple" width="120" height="40">
-                                            </a>
-                                        </li>
-                                        <li class="application__icon">
-                                            <a class="application__icon-link"  target="_blank" rel="noopener noreferrer" href="#">
-                                                <img src="images/icons/play_store.png"
-                                                    alt="іконка додатку android" width="135" height="40">
-                                            </a>
-                                        </li>
-                                    </ul>
+                </section>
+                <div class="sale">
+                    <h2 class="sale__title">Акції та знижки</h2>
+                    <ul class="sale__inner">
+                        <li class="sale__list">
+                            <article class="restaurants-card">
+                                <a class="restaurants-card__picture" href="#">
+                                    <img class="restaurants-card__img" src="images/rest/pic/blaze_pizza.png" alt="піца"
+                                        width="370" height="300">
+                                </a>
+                                <div class="restaurants-card__text">
+                                    <a class="restaurants-card__link" href="#">
+                                        <h3 class="restaurants-card__title ">Знижка на другу піцу</h3>
+                                    </a>
                                 </div>
-                                <div class="application__image" style="background-image: url(images/icons/get_app.png);">
+                            </article>
+                        </li>
+                        <li class="sale__list">
+                            <article class="restaurants-card">
+                                <a class="restaurants-card__picture" href="#">
+                                    <img class="restaurants-card__img" src="images/rest/pic/kfc.png" alt="піца"
+                                        width="370" height="300">
+                                </a>
+                                <div class="restaurants-card__text sale__text">
+                                    <a class="restaurants-card__link" href="#">
+                                        <h3 class="restaurants-card__title sale__text">Картопелька з KFC задарма при
+                                            замовленні бургера</h3>
+                                    </a>
                                 </div>
-                            </div>
-                    </section>
-                    <div class="sale">
-                        <h2 class="sale__title">Акції та знижки</h2>
-                        <ul class="sale__inner">
-                            <li class="sale__list">
-                                <article class="restaurants-card">
-                                    <a class="restaurants-card__picture" href="#">
-                                        <img class="restaurants-card__img" src="images/rest/pic/blaze_pizza.png" alt="піца"
-                                            width="370" height="300">
+                            </article>
+                        </li>
+                        <li class="sale__list">
+                            <article class="restaurants-card">
+                                <a class="restaurants-card__picture" href="#">
+                                    <img class="restaurants-card__img" src="images/rest/pic/star_burgers.png" alt="піца"
+                                        width="370" height="300">
+                                </a>
+                                <div class="restaurants-card__text sale__text sale__text">
+                                    <a class="restaurants-card__link" href="#">
+                                        <h3 class="restaurants-card__title sale__text">Чорні бургери на чорний день</h3>
                                     </a>
-                                    <div class="restaurants-card__text">
-                                        <a class="restaurants-card__link" href="#">
-                                            <h3 class="restaurants-card__title ">Знижка на другу піцу</h3>
-                                        </a>
-                                    </div>
-                                </article>
-                            </li>
-                            <li class="sale__list">
-                                <article class="restaurants-card">
-                                    <a class="restaurants-card__picture" href="#">
-                                        <img class="restaurants-card__img" src="images/rest/pic/kfc.png" alt="піца"
-                                            width="370" height="300">
-                                    </a>
-                                    <div class="restaurants-card__text sale__text">
-                                        <a class="restaurants-card__link" href="#">
-                                            <h3 class="restaurants-card__title sale__text">Картопелька з KFC задарма при замовленні бургера</h3>
-                                        </a>
-                                    </div>
-                                </article>
-                            </li>
-                            <li class="sale__list">
-                                <article class="restaurants-card">
-                                    <a class="restaurants-card__picture" href="#">
-                                        <img class="restaurants-card__img" src="images/rest/pic/star_burgers.png" alt="піца"
-                                            width="370" height="300">
-                                    </a>
-                                    <div class="restaurants-card__text sale__text sale__text">
-                                        <a class="restaurants-card__link" href="#">
-                                            <h3 class="restaurants-card__title sale__text">Чорні бургери на чорний день</h3>
-                                        </a>
-                                    </div>
-                                </article>
-                            </li>
-                        </ul>
-                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-top">
-                    <div class="footer-top__action">
-                        <a class="logo footer__logo" href="#">
-                            <img class="logo__img" src="images/logo.svg" alt="логотип доставки" width="200"
-                                height="39">
-                        </a>
-                        <form class="form-subscribe" action="#">
-                            <label class="sr-only" for="email">Впишіть свою електонну адресу</label>
-                            <input class="form-subscribe__input" type="email" required id="email" name="email"
-                                placeholder="Ваш email">
-                            <button class="form-subscribe__btn btn active-elm" type="submit">
-                                <svg class="form-subscribe__icon">
-                                    <use xlink:href="images/sprite.svg#footer_button"></use>
-                                </svg>
-                                Підписатись
-                            </button>
-                        </form>
-                    </div>
-                    <ul class="footer-top__list">
-                        <li class="footer-top__item link-active">
-                            <a class="footer-top__link" href="#">Як це працює</a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-top__action">
+                    <a class="logo footer__logo" href="#">
+                        <img class="logo__img" src="images/logo.svg" alt="логотип доставки" width="200" height="39">
+                    </a>
+                    <form class="form-subscribe" action="#">
+                        <label class="sr-only" for="email">Впишіть свою електонну адресу</label>
+                        <input class="form-subscribe__input" type="email" required id="email" name="email"
+                            placeholder="Ваш email">
+                        <button class="form-subscribe__btn btn active-elm" type="submit">
+                            <svg class="form-subscribe__icon">
+                                <use xlink:href="images/sprite.svg#footer_button"></use>
+                            </svg>
+                            Підписатись
+                        </button>
+                    </form>
+                </div>
+                <ul class="footer-top__list">
+                    <li class="footer-top__item link-active">
+                        <a class="footer-top__link" href="#">Як це працює</a>
+                    </li>
+                    <li class="footer-top__item link-active">
+                        <a class="footer-top__link" href="#">Про нас</a>
+                    </li>
+                    <li class="footer-top__item link-active">
+                        <a class="footer-top__link" href="#">Застосунок</a>
+                    </li>
+                    <li class="footer-top__item link-active">
+                        <a class="footer-top__link" href="#">Продукти</a>
+                    </li>
+                    <li class="footer-top__item link-active">
+                        <a class="footer-top__link" href="#">Новини</a>
+                    </li>
+                    <li class="footer-top__item link-active">
+                        <a class="footer-top__link" href="#">Блог</a>
+                    </li>
+                    <li class="footer-top__item link-active">
+                        <a class="footer-top__link" href="#">Страви </a>
+                    </li>
+                    <li class="footer-top__item link-active">
+                        <a class="footer-top__link" href="#">Партнери</a>
+                    </li>
+                    <li class="footer-top__item link-active">
+                        <a class="footer-top__link" href="#">Що нового?</a>
+                    </li>
+                    <li class="footer-top__item link-active">
+                        <a class="footer-top__link" href="#">Меню</a>
+                    </li>
+                    <li class="footer-top__item link-active">
+                        <a class="footer-top__link" href="#">ЧаПи</a>
+                    </li>
+                    <li class="footer-top__item">
+                        <a class="footer-top__link" href="#">Мапа сайту</a>
+                    </li>
+                </ul>
+                <address class="address">
+                    <ul class="address-list">
+                        <li class="address-list__item link-active">
+                            <a class="address-list__link address-list__link--str" href="#">вул. Т.Г.Шевченка, 1</a>
                         </li>
-                        <li class="footer-top__item link-active">
-                            <a class="footer-top__link" href="#">Про нас</a>
+                        <li class="address-list__item link-active">
+                            <a class="address-list__link address-list__link--tel"
+                                href="tel:+380501112233">380501112233</a>
                         </li>
-                        <li class="footer-top__item link-active">
-                            <a class="footer-top__link" href="#">Застосунок</a>
-                        </li>
-                        <li class="footer-top__item link-active">
-                            <a class="footer-top__link" href="#">Продукти</a>
-                        </li>
-                        <li class="footer-top__item link-active">
-                            <a class="footer-top__link" href="#">Новини</a>
-                        </li>
-                        <li class="footer-top__item link-active">
-                            <a class="footer-top__link" href="#">Блог</a>
-                        </li>
-                        <li class="footer-top__item link-active">
-                            <a class="footer-top__link" href="#">Страви </a>
-                        </li>
-                        <li class="footer-top__item link-active">
-                            <a class="footer-top__link" href="#">Партнери</a>
-                        </li>
-                        <li class="footer-top__item link-active">
-                            <a class="footer-top__link" href="#">Що нового?</a>
-                        </li>
-                        <li class="footer-top__item link-active">
-                            <a class="footer-top__link" href="#">Меню</a>
-                        </li>
-                        <li class="footer-top__item link-active">
-                            <a class="footer-top__link" href="#">ЧаПи</a>
-                        </li>
-                        <li class="footer-top__item">
-                            <a class="footer-top__link" href="#">Мапа сайту</a>
+                        <li class="address-list__item link-active">
+                            <a class="address-list__link address-list__link--email"
+                                href="mailto:support@sfood.com">support@sfood.com</a>
                         </li>
                     </ul>
-                    <address class="address">
-                        <ul class="address-list">
-                            <li class="address-list__item link-active">
-                                <a class="address-list__link address-list__link--str" href="#">вул. Т.Г.Шевченка, 1</a>
-                            </li>
-                            <li class="address-list__item link-active">
-                                <a class="address-list__link address-list__link--tel" href="tel:+380501112233">380501112233</a>
-                            </li>
-                            <li class="address-list__item link-active">
-                                <a class="address-list__link address-list__link--email"
-                                    href="mailto:support@sfood.com">support@sfood.com</a>
-                            </li>
-                        </ul>
-                        <ul class="social-list">
-                            <li class="social-list__item">
-                                <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer" aria-label="перейти в фейсбук">
-                                    <svg class="social-list__icon">
-                                        <use xlink:href="images/sprite.svg#ci-facebook"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-list__item">
-                                <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer" aria-label="перейти в твітер">
-                                    <svg class="social-list__icon" >
-                                        <use xlink:href="images/sprite.svg#ci-twitter" ></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="social-list__item">
-                                <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer" aria-label="перейти в інстаграм">
-                                    <svg class="social-list__icon">
-                                        <use xlink:href="images/sprite.svg#ci_instagram"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </address>
-                </div>
+                    <ul class="social-list">
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer"
+                                aria-label="перейти в фейсбук">
+                                <svg class="social-list__icon">
+                                    <use xlink:href="images/sprite.svg#ci-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer"
+                                aria-label="перейти в твітер">
+                                <svg class="social-list__icon">
+                                    <use xlink:href="images/sprite.svg#ci-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#" target="_blank" rel="noopener noreferrer"
+                                aria-label="перейти в інстаграм">
+                                <svg class="social-list__icon">
+                                    <use xlink:href="images/sprite.svg#ci_instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </address>
             </div>
-            <div class="footer-bottom">
-                <p class="footer-bottom__copy">© 2023 Simple Food</p>
-            </div>
-        </footer>
-    
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-bottom__copy">© 2023 Simple Food</p>
+        </div>
+    </footer>
+
     <div class="mobile-menu">
         <button class="close" type="button">
             <span class="sr-only">Закрити меню</span>
@@ -622,7 +631,8 @@
         <div class="mobile-menu__content">
         </div>
     </div>
-    <div class="overlay"></div>
+    <div class="overlay overlay--mobile-menu "></div>
     <script src="js/main.min.js"></script>
 </body>
+
 </html>
