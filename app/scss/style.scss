@@ -456,6 +456,7 @@ body.lock {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    @extend %rubik-400;
 
     @include mq("desktop") {
         width: 100%;
@@ -480,6 +481,7 @@ body.lock {
         color: $default;
         margin-bottom: 10px;
         @include line-clamp(3);
+        @extend %rubik-400;
     }
 
     &__price {
@@ -615,6 +617,7 @@ body.lock {
         margin-bottom: 30px;
         font-size: 36px;
         line-height: 1.3;
+        @extend %rubik-500;
 
         @include mq("tablet-2") {
             font-size: 30px;
@@ -753,6 +756,7 @@ body.lock {
     background-color: $text;
     border-radius: 10px;
     transition: box-shadow 0.4s;
+    @extend %rubik-400;
 
     &:hover {
         box-shadow: 0 3px 15px 0 rgba(255, 104, 56, 0.5);
@@ -799,6 +803,7 @@ body.lock {
         font-size: 24px;
         line-height: 1.3;
         margin-bottom: 19px;
+        @extend %rubik-400;
     }
 
     &__conect {
@@ -1599,7 +1604,7 @@ body.lock {
     left: -100%;
     width: 80%;
     height: 100%;
-    background: $title;
+    background: $text;
     transition: left 0.3s ease;
     z-index: 1000;
 
@@ -1707,6 +1712,7 @@ body.lock {
     column-gap: 10px;
     margin-bottom: 65px;
     width: 100%;
+    @extend %rubik-400;
 
     @include mq("desktop") {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1875,6 +1881,7 @@ body.lock {
     }
 
     &__title {
+        @extend %rubik-400;
         padding: 15px;
         font-size: 24px;
         line-height: 1.2;
@@ -2131,7 +2138,8 @@ body.lock {
         font-size: 24px;
         line-height: 1.3;
         margin: 0;
-        padding-bottom: 5px;
+        padding: 5px;
+        @extend %rubik-400;
     }
 
     .slick-disabled {

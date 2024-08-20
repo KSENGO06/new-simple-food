@@ -116,12 +116,12 @@ button {
   font-weight: 300;
 }
 
-.reviews-statistics__span, .reviews-statistics__text, .reviews-statistics__time, .characteristics__span, body {
+.reviews-statistics__span, .reviews-statistics__text, .reviews-statistics__time, .characteristics__span, .sale__text, .filter__title, .catalog-cart, .restaurants-card__title, .restaurants-card, .categories-card__title, .categories-card, body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
 
-.reviews-statistics__author, .reviews-statistics__title, .characteristics__text, .product-slider__title, .product-content__btn, .product-content__price, .product-content__title, .catalog__title, .form-subscribe__btn, .application__title, .reviews__quote-author, .categories-card__price, .hero__title, .title {
+.reviews-statistics__author, .reviews-statistics__title, .characteristics__text, .product-slider__title, .product-content__btn, .product-content__price, .product-content__title, .catalog__title, .form-subscribe__btn, .application__title, .reviews__quote-author, .about__title, .categories-card__price, .hero__title, .title {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
 }
@@ -2200,7 +2200,7 @@ body.lock {
   left: -100%;
   width: 80%;
   height: 100%;
-  background: #363853;
+  background: #ffffff;
   -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
   z-index: 1000;
@@ -2751,7 +2751,7 @@ body.lock {
   font-size: 24px;
   line-height: 1.3;
   margin: 0;
-  padding-bottom: 5px;
+  padding: 5px;
 }
 .sale .slick-disabled {
   border-color: #ff6838;

@@ -10,6 +10,7 @@ const del = require("del");
 const browserSync = require('browser-sync').create();
 const svgSprite = require('gulp-svg-sprite');
 const cheerio = require('gulp-cheerio');
+const nunjucksRender = require('gulp-nunjucks-render');
 const replace = require('gulp-replace');
 const rename = require('gulp-rename');
 
@@ -21,6 +22,14 @@ function browsersync() {
     },
 
   });
+}
+
+function nunjucks(){
+  return src ('app/*.njk')
+  .pipe (nunjucksRender())
+  .pipe (dest('app'))
+  .pipe(browserSync.stream())
+
 }
 
 
@@ -118,6 +127,7 @@ function cleanDist() {
 
 function watching() {
   watch(["app/scss/**/*.scss"], styles);
+  watch(["app/*.njk"],nunjucks);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
   watch(["app/**/*.html"]).on("change", browserSync.reload);
   watch(['app/images/icons/*.svg'], svgSprites);
@@ -127,6 +137,7 @@ function build() {
     base: "app",
   }).pipe(dest("dist"));
 }
+
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
@@ -135,9 +146,10 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 exports.svgSprites = svgSprites;
+exports.nunjucks = nunjucks;
 exports.fileIncludes = fileIncludes;
 exports.copyStyles = copyStyles;
 
-exports.default = parallel(copySwipedEvents, styles, fileIncludes, scripts, browsersync, watching);
+exports.default = parallel(nunjucks, copySwipedEvents, styles, fileIncludes, scripts, browsersync, watching);
 
 
